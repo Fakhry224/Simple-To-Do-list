@@ -1,0 +1,23 @@
+<div class="date-container">
+  <h1><%= weekday %>, <%= month %> <%= day %></h1>
+</div>
+
+<div class="box">
+  <% works.forEach((item) => { %>
+  <div class="todo-item">
+    <input type="checkbox" name="check" id="check" />
+    <p><%= item %></p>
+  </div>
+  <%}); %>
+
+  <form class="new-item" action="/addItemWork" method="post">
+    <input
+      type="text"
+      name="todo"
+      id="todo"
+      placeholder="New Item"
+      autocomplete="off"
+    />
+    <button type="submit" name="todoList">+</button>
+  </form>
+</div>
